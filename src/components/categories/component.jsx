@@ -6,9 +6,9 @@ export const Categories = ({ categories, onCategorySelect } ) => {
         <>
         {categories.map( ( category ) =>
             <Category
-                title={category.name}
-                onClick={() => onCategorySelect(category.name)}
-                key={category.id}
+                title={category.name || category}
+                onClick={() => onCategorySelect(category)}
+                key={category.id || 0}
             />
         )}
     </>
